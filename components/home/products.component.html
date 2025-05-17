@@ -1,0 +1,25 @@
+<div class="container w-100">
+    <nav class="navbar navbar-light bg-light px-3">
+        <a class="navbar-brand fw-bold" href="#">MyStore</a>
+        <div class="d-flex align-items-center">
+            <a href="#" class="nav-link me-3">Login </a>
+            <a href="#" class="nav-link">Register</a>
+            <a href="#" class="nav-link position-relative">
+                <!-- <i class="fas fa-shopping-cart"></i> -->
+                <i class="fa fa-shopping-cart fs-2 ms-3"></i>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    0
+                </span>
+            </a>
+        </div>
+    </nav>
+</div>
+
+<div class="container d-flex align-items-center justify-content-center">
+    <div class="row row-cols-1 row-cols-md-3 g-4 mt-5">
+        @for (product of products; track product) {
+        <app-product [productItem]="product"></app-product>
+        }
+        <div>--------------------</div>
+    </div>
+</div>
